@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Hexapod/hexapod_rig.glb" type="PackedScene" id=1]
+[ext_resource path="res://Skeleton.gd" type="Script" id=2]
 
 [sub_resource type="BoxShape" id=23]
 extents = Vector3( 0.15389, 0.0391235, 0.130728 )
@@ -16,6 +17,9 @@ extents = Vector3( 0.0029385, 0.0248102, 0.107738 )
 
 [node name="hexapod_rig" instance=ExtResource( 1 )]
 
+[node name="Skeleton" parent="Armature" index="0"]
+script = ExtResource( 2 )
+
 [node name="Physical Bone body" type="PhysicalBone" parent="Armature/Skeleton" index="416"]
 transform = Transform( 1, 4.01826e-30, 2.45543e-36, -4.01826e-30, 1, -1.05205e-07, -2.87817e-36, 1.05205e-07, 1, 0, 0.032, 4.93309e-09 )
 joint_type = 1
@@ -30,9 +34,9 @@ transform = Transform( 1, -3.0268e-43, 0, -3.0268e-43, 1, 0, 0, 0, 1, -3.36933e-
 shape = SubResource( 23 )
 
 [node name="Physical Bone coxa_front_l" type="PhysicalBone" parent="Armature/Skeleton" index="417"]
-transform = Transform( 0.66786, 6.92497e-06, 0.744287, 1.65044e-05, -1, -5.50551e-06, 0.744287, 1.59609e-05, -0.66786, -0.109498, 0.064468, 0.063218 )
+transform = Transform( 0.667858, 6.99005e-06, 0.744285, 1.66018e-05, -1, -5.5055e-06, 0.744284, 1.60335e-05, -0.667859, -0.109498, 0.064468, 0.063218 )
 joint_type = 3
-body_offset = Transform( 1, 0, 0, -9.09495e-13, 1, 0, 0, 0, 1, 0, 0, 0 )
+body_offset = Transform( 0.999996, 9.74424e-08, -3.57628e-07, -9.74478e-08, 1, -5.45697e-12, 3.27826e-07, 2.72848e-12, 0.999998, 0, 0, 0 )
 bone_name = "coxa_front_l"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 90.0
@@ -46,9 +50,9 @@ transform = Transform( 1, 0, 0, -9.09495e-13, 1, 0, 0, 0, 1, 0.0120566, 0.028737
 shape = SubResource( 24 )
 
 [node name="Physical Bone femur_front_l" type="PhysicalBone" parent="Armature/Skeleton" index="418"]
-transform = Transform( 0.706567, -0.589515, -0.391455, 0.00141738, 0.554356, -0.832279, 0.707646, 0.587505, 0.392525, -0.134607, 0.031726, 0.0883279 )
+transform = Transform( 0.706567, -0.589515, -0.391455, 0.00141734, 0.554356, -0.832279, 0.707646, 0.587505, 0.392525, -0.134607, 0.031726, 0.0883279 )
 joint_type = 1
-body_offset = Transform( 1, -2.98023e-08, -2.98023e-08, 0, 1, -1.49012e-08, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0 )
+body_offset = Transform( 1, 0, -1.19209e-07, -2.98023e-08, 1, -1.3411e-07, 5.96046e-08, 0, 1, 0, 0, 0 )
 bone_name = "femur_front_l"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -59,9 +63,9 @@ transform = Transform( 1, -2.98023e-08, -2.98023e-08, 0, 1, -1.49012e-08, 2.9802
 shape = SubResource( 25 )
 
 [node name="Physical Bone tibia_front_l" type="PhysicalBone" parent="Armature/Skeleton" index="419"]
-transform = Transform( -0.707105, -0.211695, -0.674677, 6.11897e-07, -0.954135, 0.29938, -0.707109, 0.211693, 0.674673, -0.190758, 0.084528, 0.144287 )
+transform = Transform( -0.707105, -0.211695, -0.674677, 6.01306e-07, -0.954134, 0.29938, -0.707109, 0.211693, 0.674673, -0.190758, 0.084528, 0.144287 )
 joint_type = 1
-body_offset = Transform( 1, 2.98023e-08, 0, 1.49012e-08, 1, 1.49012e-08, 5.96046e-08, -1.49012e-08, 1, 0, 0, 0 )
+body_offset = Transform( 1, 2.98023e-08, 0, 4.47035e-08, 0.999999, 1.49012e-08, 1.19209e-07, -2.98023e-08, 1, 0, 0, 0 )
 bone_name = "tibia_front_l"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -74,6 +78,7 @@ shape = SubResource( 26 )
 [node name="Physical Bone coxa_mid_l" type="PhysicalBone" parent="Armature/Skeleton" index="420"]
 transform = Transform( 0.999972, 4.79514e-08, -0.00752045, -4.71594e-08, -1, -1.26468e-05, -0.00752045, 1.26468e-05, -0.999972, 3.57266e-16, 0.064468, 0.087312 )
 joint_type = 1
+body_offset = Transform( 1, -4.26326e-14, 0, 7.10543e-15, 1, 0, 0, -5.45697e-12, 1, 0, 0, 0 )
 bone_name = "coxa_mid_l"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -87,8 +92,9 @@ __meta__ = {
 }
 
 [node name="Physical Bone femur_mid_l" type="PhysicalBone" parent="Armature/Skeleton" index="421"]
-transform = Transform( 0.999999, -0.00141736, 0.000758854, 0.0014173, 0.554355, -0.832279, 0.000758967, 0.832279, 0.554357, 8.73115e-10, 0.0317259, 0.122822 )
+transform = Transform( 0.999999, -0.00141736, 0.000758854, 0.0014173, 0.554355, -0.832279, 0.000758968, 0.832279, 0.554357, 8.73115e-10, 0.0317259, 0.122822 )
 joint_type = 1
+body_offset = Transform( 1, 0, -2.32831e-10, 2.91038e-10, 1, -8.9407e-08, 7.567e-10, 2.98023e-08, 1, 0, 0, 0 )
 bone_name = "femur_mid_l"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -102,8 +108,9 @@ __meta__ = {
 }
 
 [node name="Physical Bone tibia_mid_l" type="PhysicalBone" parent="Armature/Skeleton" index="422"]
-transform = Transform( 1, -2.42726e-08, 6.1249e-08, -3.7835e-09, -0.954134, -0.29938, 6.59202e-08, 0.29938, -0.954134, -0.000135002, 0.0845279, 0.202096 )
+transform = Transform( 1, -2.42726e-08, 6.1249e-08, -3.78352e-09, -0.954134, -0.29938, 6.59202e-08, 0.29938, -0.954134, -0.000135002, 0.0845279, 0.202096 )
 joint_type = 1
+body_offset = Transform( 1, 0, 0, 1.24345e-14, 1, -2.98023e-08, 2.13163e-14, 1.78814e-07, 1, 0, 0, 0 )
 bone_name = "tibia_mid_l"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -117,8 +124,9 @@ __meta__ = {
 }
 
 [node name="Physical Bone coxa_back_l" type="PhysicalBone" parent="Armature/Skeleton" index="423"]
-transform = Transform( 0.869636, -9.97274e-06, -0.493693, -1.63269e-05, -1, -8.55941e-06, -0.493693, 1.55041e-05, -0.869636, 0.109498, 0.064468, 0.0632179 )
+transform = Transform( 0.869636, -9.97274e-06, -0.493693, -1.63269e-05, -1, -8.55941e-06, -0.493693, 1.5504e-05, -0.869636, 0.109498, 0.064468, 0.0632179 )
 joint_type = 1
+body_offset = Transform( 1, 3.63798e-12, 0, -2.72848e-12, 1, -5.45697e-12, 0, 0, 1, 0, 0, 0 )
 bone_name = "coxa_back_l"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -132,8 +140,9 @@ __meta__ = {
 }
 
 [node name="Physical Bone femur_back_l" type="PhysicalBone" parent="Armature/Skeleton" index="424"]
-transform = Transform( 0.866404, 0.414913, 0.277836, 0.00141722, 0.554355, -0.832279, -0.499343, 0.721483, 0.479707, 0.127253, 0.0317267, 0.0939711 )
+transform = Transform( 0.866404, 0.414913, 0.277836, 0.00141724, 0.554355, -0.832279, -0.499343, 0.721483, 0.479707, 0.127253, 0.0317267, 0.0939711 )
 joint_type = 1
+body_offset = Transform( 1, 1.19209e-07, 4.47035e-08, 2.98023e-08, 1, -1.19209e-07, 0, 0, 1, 0, 0, 0 )
 bone_name = "femur_back_l"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -147,8 +156,9 @@ __meta__ = {
 }
 
 [node name="Physical Bone tibia_back_l" type="PhysicalBone" parent="Armature/Skeleton" index="425"]
-transform = Transform( 0.866026, 0.14969, -0.477067, 2.18221e-07, -0.954134, -0.29938, -0.500001, 0.259271, -0.826304, 0.166773, 0.0845287, 0.162692 )
+transform = Transform( 0.866026, 0.14969, -0.477068, 2.23516e-07, -0.954134, -0.29938, -0.500001, 0.259271, -0.826304, 0.166773, 0.0845287, 0.162692 )
 joint_type = 1
+body_offset = Transform( 1, 5.96046e-08, -5.96046e-08, -1.49012e-08, 1, -1.78814e-07, 2.98023e-08, -4.47035e-08, 1, 0, 0, 0 )
 bone_name = "tibia_back_l"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -164,6 +174,7 @@ __meta__ = {
 [node name="Physical Bone coxa_mid_r" type="PhysicalBone" parent="Armature/Skeleton" index="426"]
 transform = Transform( -0.999917, 7.95173e-08, 0.0129248, -8.08771e-08, -1, -1.04682e-07, 0.0129248, -1.05718e-07, 0.999916, 1.30465e-31, 0.064468, -0.087312 )
 joint_type = 1
+body_offset = Transform( 1, 2.9976e-15, 0, 3.33067e-15, 1, 0, 0, -4.26326e-14, 1, 0, 0, 0 )
 bone_name = "coxa_mid_r"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -179,6 +190,7 @@ __meta__ = {
 [node name="Physical Bone femur_mid_r" type="PhysicalBone" parent="Armature/Skeleton" index="427"]
 transform = Transform( -0.999999, -0.00141741, 0.000759111, -0.00141754, 0.554355, -0.832278, 0.000758867, -0.832279, -0.554356, 6.17001e-09, 0.031726, -0.122822 )
 joint_type = 1
+body_offset = Transform( 1, 1.74623e-10, 2.91038e-11, 0, 1, -2.98023e-08, -2.91038e-11, 3.8743e-07, 1, 0, 0, 0 )
 bone_name = "femur_mid_r"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -192,8 +204,9 @@ __meta__ = {
 }
 
 [node name="Physical Bone tibia_mid_r" type="PhysicalBone" parent="Armature/Skeleton" index="428"]
-transform = Transform( 1, 8.09086e-08, 3.43163e-07, -2.53785e-08, -0.954133, 0.299381, 3.51487e-07, -0.29938, -0.954134, -0.000135002, 0.084528, -0.202096 )
+transform = Transform( 1, 8.09087e-08, 3.43163e-07, -2.53786e-08, -0.954133, 0.299381, 3.51487e-07, -0.29938, -0.954134, -0.000135002, 0.084528, -0.202096 )
 joint_type = 1
+body_offset = Transform( 1, 6.39488e-14, 0, 2.13163e-14, 1, 5.96046e-08, -1.42109e-13, 0, 1, 0, 0, 0 )
 bone_name = "tibia_mid_r"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -209,6 +222,7 @@ __meta__ = {
 [node name="Physical Bone coxa_front_r" type="PhysicalBone" parent="Armature/Skeleton" index="429"]
 transform = Transform( -0.699429, 6.72154e-06, 0.714702, -2.62758e-06, -1, 6.83325e-06, 0.714702, 2.90144e-06, 0.699429, -0.109498, 0.0644677, -0.0632178 )
 joint_type = 1
+body_offset = Transform( 1, 0, 0, -2.72848e-12, 1, 5.45697e-12, 0, 0, 1, 0, 0, 0 )
 bone_name = "coxa_front_r"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -222,8 +236,9 @@ __meta__ = {
 }
 
 [node name="Physical Bone femur_front_r" type="PhysicalBone" parent="Armature/Skeleton" index="430"]
-transform = Transform( -0.706568, -0.589513, -0.391453, -0.0014167, 0.554354, -0.832279, 0.707644, -0.587507, -0.392524, -0.134607, 0.0317257, -0.0883266 )
+transform = Transform( -0.706568, -0.589513, -0.391453, -0.00141663, 0.554354, -0.832279, 0.707644, -0.587507, -0.392525, -0.134607, 0.0317257, -0.0883266 )
 joint_type = 1
+body_offset = Transform( 1, -2.98023e-08, -8.9407e-08, 1.19209e-07, 1, 4.17233e-07, 0, 0, 1, 0, 0, 0 )
 bone_name = "femur_front_r"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -237,8 +252,9 @@ __meta__ = {
 }
 
 [node name="Physical Bone tibia_front_r" type="PhysicalBone" parent="Armature/Skeleton" index="431"]
-transform = Transform( -0.707109, -0.211696, 0.674672, -9.61008e-08, -0.954132, -0.299384, 0.707105, -0.211697, 0.674675, -0.190758, 0.0845277, -0.144286 )
+transform = Transform( -0.707109, -0.211696, 0.674672, -2.45532e-07, -0.954132, -0.299384, 0.707105, -0.211697, 0.674675, -0.190758, 0.0845277, -0.144286 )
 joint_type = 1
+body_offset = Transform( 1, 1.19209e-07, -5.96046e-08, 1.19209e-07, 1, -1.19209e-07, 1.19209e-07, 7.45058e-08, 1, 0, 0, 0 )
 bone_name = "tibia_front_r"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -252,8 +268,9 @@ __meta__ = {
 }
 
 [node name="Physical Bone coxa_back_r" type="PhysicalBone" parent="Armature/Skeleton" index="432"]
-transform = Transform( -0.870598, -4.06056e-06, -0.491995, 2.37531e-06, -1, 4.05009e-06, -0.491995, 2.35735e-06, 0.870598, 0.109498, 0.0644679, -0.063218 )
+transform = Transform( -0.870598, -4.06056e-06, -0.491995, 2.37531e-06, -1, 4.05009e-06, -0.491995, 2.35736e-06, 0.870598, 0.109498, 0.0644679, -0.063218 )
 joint_type = 1
+body_offset = Transform( 1, 0, 0, 1.36424e-12, 1, 0, 0, 1.13687e-12, 1, 0, 0, 0 )
 bone_name = "coxa_back_r"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -267,8 +284,9 @@ __meta__ = {
 }
 
 [node name="Physical Bone femur_back_r" type="PhysicalBone" parent="Armature/Skeleton" index="433"]
-transform = Transform( -0.866405, 0.414911, 0.277834, -0.00141592, 0.554357, -0.832277, -0.499341, -0.721483, -0.47971, 0.127253, 0.0317259, -0.09397 )
+transform = Transform( -0.866405, 0.414911, 0.277834, -0.00141594, 0.554357, -0.832277, -0.499341, -0.721482, -0.47971, 0.127253, 0.0317259, -0.09397 )
 joint_type = 1
+body_offset = Transform( 1, -1.49012e-07, 7.45058e-08, -2.98023e-08, 1, 1.78814e-07, 0, 0, 1, 0, 0, 0 )
 bone_name = "femur_back_r"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -282,8 +300,9 @@ __meta__ = {
 }
 
 [node name="Physical Bone tibia_back_r" type="PhysicalBone" parent="Armature/Skeleton" index="434"]
-transform = Transform( 0.86602, 0.149693, 0.477076, -2.12953e-06, -0.954132, 0.299384, 0.500009, -0.259273, -0.826298, 0.166773, 0.0845278, -0.162691 )
+transform = Transform( 0.86602, 0.149693, 0.477076, -2.10109e-06, -0.954132, 0.299384, 0.500009, -0.259273, -0.826298, 0.166773, 0.0845278, -0.162691 )
 joint_type = 1
+body_offset = Transform( 1, 0, 0, -2.98023e-08, 1, -1.49012e-08, 0, 1.49012e-08, 1, 0, 0, 0 )
 bone_name = "tibia_back_r"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
