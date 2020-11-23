@@ -11,7 +11,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.112292, 0 )
 [node name="hexapod_rig" parent="." instance=ExtResource( 1 )]
 
 [node name="hexapod_rig2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.220935, 0.600138 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.258946, -0.534436 )
 
 [node name="hexapod_rig3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.458969, 1.14724 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96046e-08, 0.504281, -0.506184 )
