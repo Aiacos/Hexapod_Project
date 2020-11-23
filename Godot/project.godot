@@ -19,10 +19,18 @@ config/name="Hexapod"
 run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1920
+window/size/height=1080
+
 [gdnative]
 
 singletons=[ "res://pythonscript.gdnlib" ]
 
 [rendering]
 
+quality/filters/anisotropic_filter_level=8
+quality/filters/use_nearest_mipmap_filter=true
+quality/filters/msaa=4
 environment/default_environment="res://default_env.tres"
