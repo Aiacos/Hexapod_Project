@@ -131,3 +131,11 @@ dmypy.json
 *.md5
 
 Godot/Hexapod/
+
+Godot/addons/
+
+Godot/README.txt
+
+Godot/pythonscript.gdnlib
+
+Godot/LICENSE.txt
